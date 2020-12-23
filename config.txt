@@ -1,0 +1,5 @@
+USERNAME="sameeran"
+DIRECTORIES="flang/ mlir/"
+OUTPUTFILE="sameeran_fir_dev_merged_commits_flang_mlir.tsv"
+
+TARGET_PROJECT_DIR="/home/amd/Workspace/tool-chain/f18-llvm-project/"
