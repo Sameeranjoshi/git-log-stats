@@ -34,3 +34,5 @@ Find contributions made by user in a particular project's `git log` and generate
 3. To generate the code reviewed by user, currently very specific keyword are used based on LLVM-PROJECT.
    If needed please modify `trailers.awk` for your project. 
    - `bash genReviewTextFileSummary.sh`
+
+4. Import the generated file in excel.
