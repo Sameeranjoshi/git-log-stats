@@ -25,14 +25,14 @@ else
 	DIRECTORIES_="$DIRECTORIES"
 fi
 
-#Check OUTPUTFILE
-if [ -z "${OUTPUTFILE}" ]; then 
-	echo "OUTPUTFILE is unset";
-	echo "EXITING PLEASE SET 'OUTPUTFILE' IN config.txt"
+#Check COMMITOUTPUTFILE
+if [ -z "${COMMITOUTPUTFILE}" ]; then 
+	echo "COMMITOUTPUTFILE is unset";
+	echo "EXITING PLEASE SET 'COMMITOUTPUTFILE' IN config.txt"
 	exit 1
 else 
-	echo "OUTPUTFILE are set to '$OUTPUTFILE'";
-	OUTPUTFILE_="$OUTPUTFILE"
+	echo "COMMITOUTPUTFILE are set to '$COMMITOUTPUTFILE'";
+	COMMITOUTPUTFILE_="$COMMITOUTPUTFILE"
 fi
 
 #Check TARGET_PROJECT_DIR
@@ -56,13 +56,13 @@ git -C $TARGET_PROJECT_DIR log \
 --author="$USERNAME_" \
 --pretty=format:'%x1E%h%x1F%an%x1F%ae%x1F%aD%x1F%s%x1F%B%x1E' \
 $DIRECTORIES_ \
-| gawk -f trailers.awk > $OUTPUTDIR/$OUTPUTFILE_
+| gawk -f trailers.awk > $OUTPUTDIR/$COMMITOUTPUTFILE_
 
 #%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 echo 
 echo "!Wohooooo!"
 echo "Import the generated file "
-echo `pwd`/$OUTPUTDIR/$OUTPUTFILE_
+echo `pwd`/$OUTPUTDIR/$COMMITOUTPUTFILE_
 echo "in excel "
 
 echo 
