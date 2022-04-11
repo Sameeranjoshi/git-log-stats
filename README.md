@@ -1,6 +1,10 @@
 # git-log-stats
 Find contributions made by user in a particular project's `git log` and generates excel using single command.
 
+# DEMO 
+
+https://user-images.githubusercontent.com/24942282/162724843-32a61102-bbe3-4966-bd1b-c37914ae0dda.mp4
+
 # STEPS TO GENERATE EXCEL
 1. Fill values in config.txt.
 
@@ -14,6 +18,10 @@ Find contributions made by user in a particular project's `git log` and generate
   TARGET_PROJECT_DIR="/home/amd/Workspace/tool-chain/f18-llvm-project/"
   ```
   
+
+
+
+
   A few comments on `config.txt`
    - `USERNAME`
      - Field could be the emails as well, just be sure to have the value such that it's a unique value a user will be searched in git log.
